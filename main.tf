@@ -6,7 +6,7 @@ module "vpc" {
 
 module "vms" {
   source = "./modules/vm"
-  depends_on = module.vpc
+  depends_on = [module.vpc]
 
   num_vms = var.num_vms
   machine_types = var.machine_types
