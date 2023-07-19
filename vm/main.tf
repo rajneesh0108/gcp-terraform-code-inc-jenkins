@@ -1,4 +1,4 @@
-resource "google_compute_instance" "vms" {
+resource "google_compute_instance" "vm" {
   count = var.num_vms
 
   name = "vm-${count.index}"
