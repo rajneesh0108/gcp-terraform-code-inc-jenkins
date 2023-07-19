@@ -1,7 +1,7 @@
 output "vm_ids" {
-  value = module.vms.vm_ids
+  value = google_compute_instance.vms.*.id
 }
 
 output "vm_names" {
-  value = module.vms.vm_names
+  value = google_compute_instance.vms.*.name
 }
