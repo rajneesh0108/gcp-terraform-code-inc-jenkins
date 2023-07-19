@@ -8,7 +8,8 @@ resource "google_compute_instance" "vms" {
   boot_disk {
     initialize_params {
       image = var.images[count.index]
-
+}
+}
   network_interface {
     network = "default"  # Replace with the name of your VPC network
     access_config {
