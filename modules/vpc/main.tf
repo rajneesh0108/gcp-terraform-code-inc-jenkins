@@ -1,6 +1,5 @@
 resource "google_compute_network" "vpc" {
   name = var.name
-  network_id = var.network_id
 }
 
 resource "google_compute_subnetwork" "subnet" {
