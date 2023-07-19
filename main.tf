@@ -1,5 +1,5 @@
-module "vm" {
-  source = "./modules/vm"
+module "vms" {
+  source = "./vm"
 
   num_vms = var.num_vms
   machine_types = var.machine_types
