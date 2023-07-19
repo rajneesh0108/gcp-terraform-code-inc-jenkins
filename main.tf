@@ -16,11 +16,8 @@ module "vms" {
   vpc_id = module.vpc.outputs.id
   subnet_id = module.vpc.outputs.subnet_id
 
-  output "vm_ids" {
-    value = module.vms.vm_ids
-  }
-
-  output "vm_names" {
-    value = module.vms.vm_names
+  locals {
+    vm_ids = module.vms.vm_ids
+    vm_names = module.vms.vm_names
   }
 }
