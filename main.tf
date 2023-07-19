@@ -11,6 +11,8 @@ module "vms" {
   machine_types = var.machine_types
   images = var.images
   zones = var.zones
+
+  depends_on = [module.vpc]
 }
 
 locals {
