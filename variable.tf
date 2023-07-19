@@ -17,3 +17,7 @@ variable "zones" {
   type = list(string)
   default = ["us-central1-a", "us-central1-b", "us-central1-c"]
 }
+
+variable "other_project_id" {
+  type = string
+}
