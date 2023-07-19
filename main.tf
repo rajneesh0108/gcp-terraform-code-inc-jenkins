@@ -13,8 +13,6 @@ module "vms" {
   images = var.images
   zones = var.zones
 
-  vpc_id = module.vpc.outputs.id
-  subnet_id = module.vpc.outputs.subnet_id
 
   locals {
     vm_ids = module.vms.vm_ids
