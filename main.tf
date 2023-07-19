@@ -1,4 +1,4 @@
-module "vms" {
+module "vm" {
   source = "./modules/vm"
 
   num_vms = var.num_vms
