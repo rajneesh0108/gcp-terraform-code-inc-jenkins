@@ -1,7 +1,7 @@
 pipeline {
 agent {
 kubernetes {
-label 'terraform'
+inheritFrom 'default'
 idleMinutes 5
 }
 }
