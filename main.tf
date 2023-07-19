@@ -6,3 +6,24 @@ module "vms" {
   images = var.images
   zones = var.zones
 }
+
+module "vpc" {
+  source = "./modules/vpc"
+
+  name = "my-vpc"
+  cidr_block = "10.0.0.0/16"
+  region = "us-central1"
+}
+
+locals {
+  vm_ids = module.vms.vm_ids
+  vm_names = module.vms.vm_names
+}
+
+output "vm_ids" {
+  value = local.vm_ids
+}
+
+output "vm_names" {
+  value = local.vm_names
+}
