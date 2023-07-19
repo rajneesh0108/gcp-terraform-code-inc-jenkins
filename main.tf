@@ -2,6 +2,7 @@ module "vpc" {
   source = "./modules/vpc"
 
   name = "my-vpc"
+  project = var.other_project_id
 }
 
 module "vms" {
