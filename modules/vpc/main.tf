@@ -1,4 +1,7 @@
 locals {
+    # Custom argument
+    custom_arg = "This is a custom argument"
+
     vpc_id = google_compute_network.vpc.id
     subnet_id = google_compute_subnetwork.subnet.id
   }
