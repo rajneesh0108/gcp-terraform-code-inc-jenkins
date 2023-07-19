@@ -1,3 +1,12 @@
+locals {
+  # Custom argument
+  custom_arg = "This is a custom argument"
+
+  # Local variable that references the output of the `google_compute_instance` resource
+  vm_ids = google_compute_instance.vms.*.id
+  vm_names = google_compute_instance.vms.*.name
+}
+
 resource "google_compute_instance" "vms" {
   count = var.num_vms
 
