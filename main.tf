@@ -13,16 +13,15 @@ module "vms" {
   images = var.images
   zones = var.zones
 
-  vpc_id = module.vpc.id
-  subnet_id = module.vpc.subnet_id
+  # The `vpc_id` and `subnet_id` variables are defined as outputs of the
+  # `module.vpc` block.
+  vpc_id = module.vpc.outputs.id
+  subnet_id = module.vpc.outputs.subnet_id
+
+  # The `locals` block defines two local variables, `vm_ids` and `vm_names`,
+  # which are the outputs of the `module.vms` block.
+  locals {
+    vm_ids = module.vms.vm_ids
+    vm_names = module.vms.vm_names
+  }
 }
-
-
-locals {
-  vm_ids = module.vms.vm_ids
-  vm_names = module.vms.vm_names
-  vpc_id = module.vpc.id
-  subnet_id = module.vpc.subnet_id
-}
-
-
