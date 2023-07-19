@@ -20,7 +20,7 @@ resource "google_compute_instance" "vms" {
 }
 }
   network_interface {
-    network = "my-vpc"  # Replace with the name of your VPC network
+    network = "default"  # Replace with the name of your VPC network
     access_config {
       // Ephemeral IP will be assigned
     }
