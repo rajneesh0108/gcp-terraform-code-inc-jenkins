@@ -52,5 +52,8 @@ echo 'pipeline successful'
 failure {
 echo 'pipeline failed :('
 }
+aborted {
+echo 'pipeline aborted may be due to some reasons related to approval'
+}
 }
 }
