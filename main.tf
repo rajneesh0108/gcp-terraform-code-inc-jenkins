@@ -18,5 +18,7 @@ module "vms" {
 locals {
   vm_ids = module.vms.vm_ids
   vm_names = module.vms.vm_names
+  vpc_id = google_compute_network.vpc.id
+  subnet_id = google_compute_subnetwork.subnet.id
 
 }
